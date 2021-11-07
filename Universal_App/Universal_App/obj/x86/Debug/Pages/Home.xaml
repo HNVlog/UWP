@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="Universal_App.Pages.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Universal_App.Pages"
+     xmlns:Models="using:Universal_App.Models" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Frame x:ConnectionId='2' x:Name="next">
+        <Grid Background="#f2f2f2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border Background="#FFCF465A" Grid.Row="0"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <RelativePanel Grid.Column="0">
+                    <Image x:ConnectionId='16' Width="150" Margin="100 0 0 0" x:Name="ImgBg" >
+                        <Image.Source>
+                            <BitmapImage UriSource="ms-appx:///Assets/logo.jpg" />
+                        </Image.Source>
+                    </Image>
+                    <TextBlock x:ConnectionId='17' Text="Applications are created swimming HNVlog" RelativePanel.RightOf="ImgBg"  x:Name="TextBg" Margin="10 20 0 0"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xeb51;" RelativePanel.RightOf="TextBg" HorizontalAlignment="Right" Margin="2 20 0 10"/>
+                </RelativePanel>
+
+                <RelativePanel Grid.Column="1" Margin="10 20 0 20" HorizontalAlignment="Center">
+                    <FontIcon x:ConnectionId='13' FontFamily="Segoe MDL2 Assets" Glyph="&#xe83c;" x:Name="logo1Bg" HorizontalAlignment="Right" Margin="10 0 0 10"/>
+                    <FontIcon x:ConnectionId='14' FontFamily="Segoe MDL2 Assets" Glyph="&#xe83c;" x:Name="logo2Bg" RelativePanel.RightOf="logo1Bg" HorizontalAlignment="Right" Margin="10 0 0 10" />
+                    <FontIcon x:ConnectionId='15' FontFamily="Segoe MDL2 Assets" Glyph="&#xe83c;" x:Name="logo3bg" RelativePanel.RightOf="logo2Bg" HorizontalAlignment="Right" Margin="10 0 0 10" />
+                </RelativePanel>
+
+                <RelativePanel Grid.Column="2" Margin="0 20 50 0" HorizontalAlignment="Right">
+                    <FontIcon x:ConnectionId='11' FontFamily="Segoe MDL2 Assets" Glyph="&#xEDAC;" x:Name="thongbaoBg" HorizontalAlignment="Right" Margin="10 0 0 10" />
+                    <FontIcon x:ConnectionId='12' FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;" x:Name="settingBg" RelativePanel.RightOf="thongbaoBg" Margin="10 0 0 10" />
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe774;" RelativePanel.RightOf="settingBg" Margin="10 0 0 10" />
+                </RelativePanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <GridView x:ConnectionId='3' x:Name="Products" Margin="30 100 0 0">
+                    <GridView.ItemTemplate>
+                        <DataTemplate                            >
+                            <Grid x:ConnectionId='5' Background="Gainsboro" Margin="50 0 40 0">
+                                <StackPanel Margin="0 0 0 0">
+                                    <TextBlock x:ConnectionId='6'                      FontSize="20" FontWeight="Bold" Margin="20 10 0 5" Width="200"/>
+                                    <Image Width="250" MaxHeight="180" Margin="5">
+                                        <Image.Source>
+                                            <BitmapImage x:ConnectionId='10'                                    />
+                                        </Image.Source>
+                                    </Image>
+                                    <TextBlock x:ConnectionId='7'                             FontSize="16" HorizontalAlignment="Center" Width="250" MaxLines="3" MaxHeight="50"/>
+                                    <Grid Width="250">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <RelativePanel Grid.Column="0">
+                                            <TextBlock x:ConnectionId='9'                       x:Name="price" FontSize="20" FontWeight="Bold" Foreground="Blue" Margin="20 10 0 10" />
+                                        </RelativePanel>
+                                        <Button x:ConnectionId='8' Grid.Column="1" Content="Read More" Background="Gold" Foreground="White" HorizontalAlignment="Right" Margin="0 10 0 10"                      />
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </Grid>
+        </Grid>
+    </Grid>
+    </Frame>
+</Page>
+
