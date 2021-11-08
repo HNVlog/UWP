@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="T2010A_UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2010A_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <SplitView x:Name="SplView" DisplayMode="CompactOverlay" IsPaneOpen="True" OpenPaneLength="250">
+        <SplitView.Pane>
+            <Button Content="Open" Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,100,0,0"/>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <ScrollViewer>
+                <Frame x:Name="MainFrame">
+                    <StackPanel>
+                        <TextBlock Text="Hello World!" FontSize="20" HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                        <Button Click="DemoForm" Content="Go To DemoForm" Margin="691,225,0,0" VerticalAlignment="Top"/>
+                        <Rectangle Fill="Green" Width="400" Height="500" Margin="20"/>
+                        <Rectangle Fill="Green" Width="400" Height="500" Margin="20"/>
+                        <Rectangle Fill="Green" Width="400" Height="500" Margin="20"/>
+                        <Rectangle Fill="Green" Width="400" Height="500" Margin="20"/>
+                        <Rectangle Fill="Green" Width="400" Height="500" Margin="20"/>
+                    </StackPanel>
+                </Frame>
+            </ScrollViewer>
+        </SplitView.Content>
+    </SplitView>
+</Page>
